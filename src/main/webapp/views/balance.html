@@ -1,0 +1,23 @@
+<table class="table table-striped" ng-init="operations()">
+    <thead>
+    <tr>
+        <th scope="col">Код операции</th>
+        <th scope="col">Снято</th>
+        <th scope="col">Остаток</th>
+        <th scope="col">Дата</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="op in operationList">
+        <td>{{op.id}}</td>
+        <td>{{op.amount}}</td>
+        <td>{{op.rest}}</td>
+        <td>{{op.date | date:'medium'}}</td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<form>
+    <button type="button" class="btn btn-outline-info" go-click="/op">Назад</button>
+    <button type="button" class="btn btn-outline-info" go-click="/">Выход</button>
+</form>

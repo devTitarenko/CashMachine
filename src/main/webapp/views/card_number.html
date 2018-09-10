@@ -1,0 +1,15 @@
+<form>
+    <div class="form-group">
+        <label for="number">Номер карты:</label>
+        <input type="text" class="form-control" id="number" aria-describedby="emailHelp"
+               placeholder="введите номер карты" value={{formatedNumber}} disabled>
+        <small id="emailHelp" class="form-text text-muted">Номер карты состоит из 16 цифр</small>
+    </div>
+    <button type="button" class="btn btn-outline-info" ng-click="isCardExist()" ng-disabled="numCtrl.isDisable()">ОК
+    </button>
+    <button type="button" class="btn btn-outline-info" ng-click="numCtrl.clear()" ng-disabled="numCtrl.isDisable()">
+        Очистить
+    </button>
+</form>
+<br>
+<keyboard></keyboard>
